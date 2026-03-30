@@ -1,0 +1,13 @@
+project_name: analisis_estres
+random_state: 42
+target_column: null
+features: []
+model:
+  name: baseline
+  params: {}
+paths:
+  raw_data: data/raw
+  interim_data: data/interim
+  processed_data: data/processed
+  models: models
+  reports: reports/figures

@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: analisis-estres
+Version: 0.1.0
+Summary: Proyecto base de Machine Learning para analisis de estres
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Analisis de estres
+
+Estructura base para un proyecto de Machine Learning en Python.
+
+## Estructura
+
+- `data/`: datos separados por etapa.
+- `notebooks/`: experimentos y exploracion.
+- `src/analisis_estres/`: codigo reutilizable del proyecto.
+- `models/`: artefactos entrenados.
+- `reports/`: figuras y salidas para documentacion.
+- `configs/`: archivos de configuracion.
+- `tests/`: pruebas.
+
+## Flujo recomendado
+
+1. Colocar datos originales en `data/raw/`.
+2. Limpiar y transformar hacia `data/interim/` y `data/processed/`.
+3. Probar ideas en `notebooks/`.
+4. Pasar logica estable a `src/analisis_estres/`.
+5. Entrenar modelos y guardar artefactos en `models/`.
+6. Exportar graficos o resultados a `reports/figures/`.
+
+## Inicio rapido
+
+```bash
+python -m venv .venv
+.venv\\Scripts\\activate
+pip install -r requirements.txt
+```

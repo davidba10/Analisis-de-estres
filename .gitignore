@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+
+# Data and artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+models/*
+reports/figures/*
+
+# Keep placeholders
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+!models/.gitkeep
+!reports/figures/.gitkeep
+!notebooks/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
