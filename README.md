@@ -1,21 +1,21 @@
-# Analisis de estres
+# Análisis de estrés
 
-Proyecto de Machine Learning para analizar y modelar el nivel de estres a partir de habitos de uso de movil, sueno, actividad fisica y fatiga mental.
+Proyecto de Machine Learning para analizar y modelar el nivel de estrés a partir de hábitos de uso de móvil, sueño, actividad física y fatiga mental.
 
 El repositorio incluye:
-- Notebook de exploracion, feature engineering y modelado.
+- Notebook de exploración, feature engineering y modelado.
 - Estructura modular en `src/` para escalar a pipeline productivo.
-- Configuracion base y carpetas separadas por etapa de datos.
+- Configuración base y carpetas separadas por etapa de datos.
 
 ## Objetivo
 
-Construir modelos de regresion y clasificacion para estudiar `stress_level` y entender que variables tienen mayor impacto en el estres percibido.
+Construir modelos de regresión y clasificación para estudiar `stress_level` y entender qué variables tienen mayor impacto en el estrés percibido.
 
 ## Dataset
 
 - Archivo principal: `data/raw/sleep_mobile_stress_dataset_15000.csv`
-- Fuente de trabajo: dataset tabular con variables demograficas, habitos digitales y de sueno.
-- Variables relevantes del analisis (entre otras):
+- Fuente de trabajo: dataset tabular con variables demográficas, hábitos digitales y de sueño.
+- Variables relevantes del análisis (entre otras):
 	- `daily_screen_time_hours`
 	- `phone_usage_before_sleep_minutes`
 	- `sleep_duration_hours`
@@ -27,17 +27,17 @@ Construir modelos de regresion y clasificacion para estudiar `stress_level` y en
 
 ```text
 .
-├─ configs/                    # Configuracion del proyecto (YAML)
+├─ configs/                    # Configuración del proyecto (YAML)
 ├─ data/
 │  ├─ raw/                     # Datos originales
 │  ├─ interim/                 # Datos intermedios
 │  ├─ processed/               # Datos listos para modelado
 │  └─ external/                # Datos externos opcionales
 ├─ models/                     # Modelos entrenados y artefactos
-├─ notebooks/                  # Analisis exploratorio y entrenamiento
+├─ notebooks/                  # Análisis exploratorio y entrenamiento
 ├─ reports/
-│  └─ figures/                 # Graficos y resultados exportados
-├─ src/analisis_estres/        # Codigo Python reutilizable
+│  └─ figures/                 # Gráficos y resultados exportados
+├─ src/analisis_estres/        # Código Python reutilizable
 └─ tests/                      # Pruebas
 ```
 
@@ -54,7 +54,7 @@ Construir modelos de regresion y clasificacion para estudiar `stress_level` y en
 	- pytest
 	- pyyaml
 
-## Instalacion
+## Instalación
 
 ```bash
 python -m venv .venv
@@ -63,7 +63,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Uso rapido
+## Uso rápido
 
 1. Coloca o valida los datos en `data/raw/`.
 2. Abre el notebook `notebooks/entrenamiento.ipynb`.
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 	 - EDA
 	 - Feature engineering
 	 - Entrenamiento de modelos
-	 - Evaluacion de metricas
+	 - Evaluación de métricas
 
 Para lanzar Jupyter:
 
@@ -79,14 +79,14 @@ Para lanzar Jupyter:
 jupyter notebook
 ```
 
-## Modulos en `src/analisis_estres`
+## Módulos en `src/analisis_estres`
 
 - `config.py`: rutas del proyecto centralizadas.
 - `data/make_dataset.py`: carga inicial de CSV.
 - `features/build_features.py`: transformaciones de features (base).
-- `models/train.py`: baseline de clasificacion con `DummyClassifier`.
-- `visualization/plots.py`: estilo comun para graficos.
-- `utils/io.py`: utilidades de E/S (creacion de directorios, etc.).
+- `models/train.py`: baseline de clasificación con `DummyClassifier`.
+- `visualization/plots.py`: estilo común para gráficos.
+- `utils/io.py`: utilidades de E/S (creación de directorios, etc.).
 
 Ejemplo de uso desde Python:
 
@@ -106,33 +106,33 @@ modelo = build_baseline_model()
 pytest
 ```
 
-## Configuracion
+## Configuración
 
-El archivo `configs/config.yaml` define parametros globales:
+El archivo `configs/config.yaml` define parámetros globales:
 - Nombre de proyecto
 - `random_state`
 - Rutas de datos/modelos/reports
-- Configuracion base del modelo
+- Configuración base del modelo
 
 ## Flujo recomendado
 
 1. Ingesta de datos (`data/raw`).
 2. Limpieza y transformaciones (`data/interim`, `data/processed`).
-3. Experimentacion en notebook (`notebooks/`).
-4. Paso de logica estable a codigo reutilizable (`src/`).
+3. Experimentación en notebook (`notebooks/`).
+4. Paso de lógica estable a código reutilizable (`src/`).
 5. Entrenamiento y guardado de artefactos (`models/`).
 6. Reporte de resultados y visualizaciones (`reports/figures/`).
 
 ## Estado actual
 
-- Proyecto en fase de experimentacion y benchmark de modelos.
-- Notebook principal con pipeline completo de entrenamiento y evaluacion.
+- Proyecto en fase de experimentación y benchmark de modelos.
+- Notebook principal con pipeline completo de entrenamiento y evaluación.
 
 ## Siguiente paso para publicarlo
 
-Antes de subirlo, revisa rapidamente:
+Antes de subirlo, revisa rápidamente:
 - Que el notebook se ejecute de principio a fin sin errores.
 - Que las rutas relativas funcionen en un entorno limpio.
-- Que `requirements.txt` incluya todas las librerias usadas.
+- Que `requirements.txt` incluya todas las librerías usadas.
 
-Con eso, esta listo para subir a GitHub.
+Con eso, está listo para subir a GitHub.
